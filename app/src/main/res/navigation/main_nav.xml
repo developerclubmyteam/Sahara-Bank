@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rajnish.myapplication.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_checkBalanceFragment"
+            app:destination="@id/checkBalanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.rajnish.myapplication.fragment.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rajnish.myapplication.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/checkBalanceFragment"
+        android:name="com.rajnish.myapplication.fragment.CheckBalanceFragment"
+        android:label="fragment_check_balance"
+        tools:layout="@layout/fragment_check_balance" >
+
+        <argument
+            android:name="balanceAmount"
+            app:argType="string" />
+    </fragment>
+</navigation>

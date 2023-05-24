@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739642813718",
+    "project_id": "sahara-bank-b94ea",
+    "storage_bucket": "sahara-bank-b94ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739642813718:android:af148636b3e3fbf66df437",
+        "android_client_info": {
+          "package_name": "com.rajnish.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739642813718-jt4mg3uag032smhft47g9sj277o0gjns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTm79YE8xc9T-fO1X4-bkaGTyeAHV3mKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739642813718-jt4mg3uag032smhft47g9sj277o0gjns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
