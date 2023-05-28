@@ -25,6 +25,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var db :DatabaseReference
     private lateinit var mppin:String
     private lateinit var balance :String
+    private var count :Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,15 +35,39 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val sharedPreferences = context?.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val mobileNumber = sharedPreferences?.getString("mobileNumber", "")
-        mobNo = mobileNumber.toString()
+         count = sharedPreferences?.getInt("countSh", 0)!!
+         mobNo = mobileNumber.toString()
 
         db = FirebaseDatabase.getInstance().reference.child("Account Details")
 
         balanceRetrive()
+        binding.tvDemo.text = "Number = "+count
 
         binding.btnBalanceEnquiry.setOnClickListener{
 
             customDialogForMpin()
+
+        }
+
+
+        binding.btnHistory.setOnClickListener{
+
+            count++
+
+            val sharedPreferences = context?.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences?.edit()
+            editor?.putInt("countSh", count)
+            editor?.apply()
+
+
+            binding.tvDemo.text = "Number = "+count
+        }
+
+        binding.btnMoneyTransfer.setOnClickListener {
+
+            val navController = findNavController()
+        // Replace "100" with your actual balance value
+            navController.navigate(R.id.action_homeFragment_to_moneyTransferFragment)
 
         }
 
@@ -61,6 +86,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val dialog = dialogBuilder.create()
         dialog.show()
+
 
         btnCheckBalance.setOnClickListener {
             val mpin = etMpin.text.toString()
@@ -85,6 +111,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
         }
+
+
 
 
     }

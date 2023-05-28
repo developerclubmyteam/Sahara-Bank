@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_checkBalanceFragment"
             app:destination="@id/checkBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moneyTransferFragment"
+            app:destination="@id/moneyTransferFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
@@ -34,4 +37,9 @@
             android:name="balanceAmount"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/moneyTransferFragment"
+        android:name="com.rajnish.myapplication.MoneyTransferFragment"
+        android:label="fragment_money_transfer"
+        tools:layout="@layout/fragment_money_transfer" />
 </navigation>
