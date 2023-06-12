@@ -21,60 +21,21 @@
 
 
         <EditText
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/name"
-            android:hint="name"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="10dp">
+            android:background="@drawable/ed_bg"
+            android:padding="10dp"
+            android:hint="Tittle" />
 
-        </EditText>
         <EditText
+            android:id="@+id/desc"
             android:layout_width="match_parent"
+            android:background="@drawable/ed_bg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
-            android:id="@+id/fname"
-            android:hint="fname"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="10dp">
-
-        </EditText>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mob"
-            android:hint="mob_mo"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="10dp">
-
-        </EditText>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/eid"
-            android:hint="email"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="10dp">
-
-        </EditText>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/pass"
-            android:hint="password"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="10dp">
-
-        </EditText>
+            android:hint="Discription" />
 
     </LinearLayout>
 
