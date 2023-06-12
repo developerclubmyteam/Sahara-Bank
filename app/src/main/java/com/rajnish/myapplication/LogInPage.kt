@@ -16,8 +16,8 @@ class LogInPage : AppCompatActivity() {
 
     private lateinit var binding: ActivityLogInPageBinding
     private lateinit var db :DatabaseReference
-     lateinit var mobNo : String
-    lateinit var mppin : String
+     private lateinit var mobNo : String
+    private lateinit var mppin : String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,6 +94,12 @@ class LogInPage : AppCompatActivity() {
         }
 
     }
+
+
+
+
+
+
 
     private fun isLogin(): Boolean {
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
